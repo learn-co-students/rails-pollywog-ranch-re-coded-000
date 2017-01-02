@@ -6,7 +6,7 @@ class TadpolesController < ApplicationController
       @frog= Frog.new(set_frog_params(@tadpole))
       if @frog.save
            @tadpole.destroy
-           redirect_to @frog, alert: 'Tadpole was successfully became a Frog.'
+           redirect_to @frog, alert: 'Tadpole successfully become a Frog.'
       else
         format.html { render :show }
       end
